@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Academy LMS</title>
+  <link rel="stylesheet" href="signup.css" />
+  <script type="module" src="sigin.js" defer></script>
+</head>
+<body>
+  <a href="index.html" class="back-top">←</a>
+  <div class="signup-container">
+    <div class="signup-left">
+      <div class="branding">
+        <h1>Join Academy LMS</h1>
+        <p>Start your learning journey with us!</p>
+      </div>
+    </div>
+
+    <div class="signup-right">
+      <form class="signup-form">
+        <h2>Create an account</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Doe" id="name" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" id="email" required />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create password" id="password" required />
+        </div>
+        <button id="submit" type="submit">Sign Up</button>
+        <p class="login-text">Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  document.querySelector('.signup-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form refresh
+    alert("Account created successfully!");
+    window.location.href = "login.html"; // Redirect to login
+  });
+</script>
+<script src="sigin.js"></script>
+</body>
+</html>
